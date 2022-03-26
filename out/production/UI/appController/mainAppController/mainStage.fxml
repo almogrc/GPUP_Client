@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<ScrollPane fx:id="mainScrollBar" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appController.mainAppController.AppController">
+   <content>
+      <BorderPane fx:id="MainBorderPane">
+         <top>
+            <ToolBar prefHeight="40.0" prefWidth="1256.0">
+               <items>
+                  <Button mnemonicParsing="false" onAction="#handleLoadXMLClicked" prefHeight="26.0" prefWidth="69.0" text="Load XML" fx:id="xmlFileLoaderButton" />
+                  <Button fx:id="showTargetsDataButton" mnemonicParsing="false" onAction="#clickSTDButtonListener" text="Show Targets Data" />
+                  <Button fx:id="runTaskButton" mnemonicParsing="false" onAction="#handleRunTaskClicked" text="Run Task" />
+                  <MenuButton fx:id="menuButtonSkins" mnemonicParsing="false" text="Skins">
+                    <items>
+                      <MenuItem fx:id="DefaultCSSChoice" mnemonicParsing="false" onAction="#handleDefaultCSSChoice" text="Default" />
+                      <MenuItem fx:id="ModernCSSChoice" mnemonicParsing="false" onAction="#handleModernCSSChoice" text="Modern" />
+                        <MenuItem fx:id="SeaCSSChoice" mnemonicParsing="false" onAction="#handleSeaCSSChoice" text="Sea" />
+                    </items>
+                  </MenuButton>
+                  <MenuButton mnemonicParsing="false" text="Animations">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#animationsOn" text="ON" />
+                      <MenuItem mnemonicParsing="false" onAction="#AnimationsOff" text="OFF" />
+                    </items>
+                  </MenuButton>
+               </items>
+            </ToolBar>
+         </top>
+         <center>
+            <AnchorPane>
+               <children>
+                  <ImageView fx:id="image" fitHeight="820.0" fitWidth="940.0" layoutX="218.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Welcome.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

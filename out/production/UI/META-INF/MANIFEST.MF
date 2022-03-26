@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: uifx.UIFX
+Class-Path: Logic.jar
+
